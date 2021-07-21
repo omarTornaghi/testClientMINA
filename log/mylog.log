@@ -1,0 +1,332 @@
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 0
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 1
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 2
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 3
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 4
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 5
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 6
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 7
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 8
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 9
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 0
+WARN NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - EXCEPTION :
+org.apache.mina.core.write.WriteToClosedSessionException
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.clearWriteRequestQueue(AbstractPollingIoProcessor.java:638)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.removeNow(AbstractPollingIoProcessor.java:590)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.removeSessions(AbstractPollingIoProcessor.java:560)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$800(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1132)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 0
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 1
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 2
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 3
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 4
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 5
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 6
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 7
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 8
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: 9
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: Ciaooo
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: Ciaooo
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: Wed Jul 07 15:21:13 CEST 2021
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@5034c75a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.Packet@6d00a15d
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.Packet@1540c735
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@5034c75a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@6cd8665b
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@5034c75a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@35875aa5
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@232a9ba5
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@5034c75a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@5034c75a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@14db2940
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@5034c75a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@6c9fc1a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@5034c75a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@28ddd0dc
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@396a51ab
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@1ff45705
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@396a51ab
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@5f7368b0
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@6f8c1dd6
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@396a51ab
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@62ee68d8
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@77c172d3
+WARN NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - EXCEPTION :
+java.lang.NullPointerException
+	at client.ClientHandler.messageReceived(ClientHandler.java:33)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:690)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.filter.logging.LoggingFilter.messageReceived(LoggingFilter.java:208)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter$ProtocolDecoderOutputImpl.flush(ProtocolCodecFilter.java:407)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:236)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:410)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:710)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@5b275dab
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@6be9f805
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@62ee68d8
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@6cd9ae6f
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@5b275dab
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@337c12d9
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@62ee68d8
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@6b7ae419
+WARN NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - EXCEPTION :
+java.lang.NullPointerException
+	at client.ClientHandler.messageReceived(ClientHandler.java:34)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:690)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.filter.logging.LoggingFilter.messageReceived(LoggingFilter.java:208)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter$ProtocolDecoderOutputImpl.flush(ProtocolCodecFilter.java:407)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:236)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:410)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:710)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@5b275dab
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@4b617241
+WARN NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - EXCEPTION :
+java.lang.NullPointerException
+	at client.ClientHandler.messageReceived(ClientHandler.java:34)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:690)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.filter.logging.LoggingFilter.messageReceived(LoggingFilter.java:208)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter$ProtocolDecoderOutputImpl.flush(ProtocolCodecFilter.java:407)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:236)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:410)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:710)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@7f9a81e8
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@77af63b9
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@7f9a81e8
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@77af63b9
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginRequest@2719af37
+WARN NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - EXCEPTION :
+java.lang.NullPointerException
+	at client.ClientHandler.messageReceived(ClientHandler.java:34)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:690)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.filter.logging.LoggingFilter.messageReceived(LoggingFilter.java:208)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter$ProtocolDecoderOutputImpl.flush(ProtocolCodecFilter.java:407)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:236)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:410)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:710)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@7f9a81e8
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@77af63b9
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginRequest@5f7368b0
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@7f9a81e8
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@3dea3597
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginRequest@65c2400a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@7f9a81e8
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@735b5592
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@735b5592
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@735b5592
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@735b5592
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@34ce4767
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginRequest@2c497798
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.LoginRequest@735b5592
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginResponse@4809036b
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.LoginRequest@63dd020c
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationCVRequest@7c98f24b
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.RegistrationCVResponse@935c37c
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationCVRequest@1b72ee31
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationVaccinatedRequest@3988d86
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationCVRequest@34910d37
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationVaccinatedRequest@5046b16f
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationCVRequest@265bd518
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationVaccinatedRequest@352c4af
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.RegistrationCVResponse@46c0a8d6
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationCVRequest@2ce4572a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationVaccinatedRequest@7a445d84
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.RegistrationCVResponse@3da066f1
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.RegistrationVaccinatedResponse@234e0cd5
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationCVRequest@513c0213
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.RegistrationCVResponse@326043dd
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationVaccinatedRequest@23412c53
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.RegistrationVaccinatedResponse@7f13f1c7
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationVaccinatedRequest@1827e136
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.RegistrationVaccinatedResponse@46c0a8d6
