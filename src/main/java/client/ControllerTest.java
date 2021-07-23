@@ -1,22 +1,19 @@
 package client;
 
-import datatypes.CentroVaccinale;
-import datatypes.Vaccinato;
-import datatypes.Vaccinazione;
-import datatypes.Vaccino;
-import datatypes.protocolmessages.LoginResponse;
-import datatypes.protocolmessages.Packet;
-import datatypes.protocolmessages.RegistrationCVResponse;
-import datatypes.protocolmessages.RegistrationVaccinatedResponse;
+import datatypes.*;
+import datatypes.protocolmessages.*;
 
 import java.sql.Date;
 
 public class ControllerTest extends Thread implements PacketReceivedListener {
-    MinaClient client;
-    public ControllerTest(MinaClient client){
+    ClientHandler client;
+    public ControllerTest(ClientHandler client){
         this.client = client;
         this.client.addListener(RegistrationCVResponse.class.toString(), this);
         this.client.addListener(RegistrationVaccinatedResponse.class.toString(), this);
+        this.client.addListener(RegistrationEVResponse.class.toString(), this);
+        this.client.addListener(UserLoginResponse.class.toString(), this);
+        this.client.addListener(UserRegistrationResponse.class.toString(), this);
     }
     @Override
     public void onPacketReceived(Packet packet) {
@@ -28,26 +25,47 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
             RegistrationVaccinatedResponse res = (RegistrationVaccinatedResponse) packet;
             System.out.println(res.getPacketName() + " " + res.isEsito());
         }
+        if(packet instanceof UserRegistrationResponse){
+            UserRegistrationResponse res = (UserRegistrationResponse) packet;
+            System.out.println("Registrazione: " + res.isEsito());
+        }
+        if(packet instanceof UserLoginResponse){
+            UserLoginResponse res = (UserLoginResponse) packet;
+            System.out.println("Login: " + res.isEsito());
+        }
+        if(packet instanceof RegistrationEVResponse){
+            RegistrationEVResponse res = (RegistrationEVResponse) packet;
+            System.out.println(res.isEsito());
+        }
     }
 
 
     /* Run per simulare il comportamento di una GUI */
     @Override
     public void run() {
+        Vaccinato vaccinato = new Vaccinato();
+        vaccinato.setCodiceFiscale("1111");
+        vaccinato.setCognome("Masin");
+        vaccinato.setNome("Davide");
+        vaccinato.setUserId("davide");
+        vaccinato.setEmail("davide.masin40@gmail.com");
+        vaccinato.setPassword("davide");
+
         CentroVaccinale cv = new CentroVaccinale();
         cv.setId(11);
-        Vaccinazione vaccinazione = new Vaccinazione();
-        vaccinazione.setCentroVaccinale(cv);
-        Vaccinato vaccinato = new Vaccinato();
-        vaccinato.setCodiceFiscale("0000");
-        vaccinato.setCognome("Tornaghi");
-        vaccinato.setNome("Omar");
-        vaccinazione.setVaccinato(vaccinato);
+
         Vaccino vaccino = new Vaccino();
         vaccino.setId(6);
-        vaccinazione.setVaccino(vaccino);
-        vaccinazione.setDataVaccinazione(new Date(System.currentTimeMillis()));
-        client.insertVaccination(vaccinazione);
+
+        Vaccinazione v = new Vaccinazione();
+        v.setDataVaccinazione(new Date(System.currentTimeMillis()));
+        v.setVaccinato(vaccinato);
+        v.setVaccino(vaccino);
+        v.setCentroVaccinale(cv);
+
+        //client.insertVaccination(v);
+        client.requestUserRegistration(vaccinato, "VthQ6M0hol9aNlEl");
+
         int i = 0;
         while(true){
             System.out.println("Cont: " + i++);
@@ -58,6 +76,30 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
             }
         }
     }
+
+    /*
+    Vaccinato vaccinato = new Vaccinato();
+        vaccinato.setCodiceFiscale("0000");
+        vaccinato.setCognome("Tornaghi");
+        vaccinato.setNome("Omar");
+
+        CentroVaccinale cv = new CentroVaccinale();
+        cv.setId(11);
+
+        Vaccino vaccino = new Vaccino();
+        vaccino.setId(6);
+
+        TipologiaEventoAvverso tipologia = new TipologiaEventoAvverso();
+        tipologia.setId(1);
+
+        EventoAvverso ev = new EventoAvverso();
+        ev.setCentroVaccinale(cv);
+        ev.setVaccino(vaccino);
+        ev.setTipologia(tipologia);
+        ev.setNote("Il davidz è ricchione");
+        ev.setSeverita(5);
+
+     */
 
 
 }
