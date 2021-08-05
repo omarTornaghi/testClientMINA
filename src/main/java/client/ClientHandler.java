@@ -110,6 +110,12 @@ public class ClientHandler {
         return true;
     }
 
+    public boolean getVaccinationByKey(String key){
+        if(session == null) return false;
+        session.write(new GetVaccinationByKeyRequest(key));
+        return true;
+    }
+
     public boolean getEvTypologies(){
         if(session == null) return false;
         session.write(new GetEVTypologiesRequest());
