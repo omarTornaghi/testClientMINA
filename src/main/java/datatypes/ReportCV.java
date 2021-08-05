@@ -1,13 +1,14 @@
 package datatypes;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ReportCV {
+public class ReportCV implements Serializable {
     private CentroVaccinale centroVaccinale; // Forse inutile
-    private Map<String, Integer> eventiAvversi;
+    private final Map<String, Integer> eventiAvversi;
     private int numEventiAvversi;
     private double severitaMedia;
 

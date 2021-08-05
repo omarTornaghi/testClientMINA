@@ -4,6 +4,7 @@ import datatypes.*;
 import datatypes.protocolmessages.*;
 
 import java.sql.Date;
+import java.util.List;
 
 public class ControllerTest extends Thread implements PacketReceivedListener {
     ClientHandler client;
@@ -14,6 +15,10 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
         this.client.addListener(RegistrationEVResponse.class.toString(), this);
         this.client.addListener(UserLoginResponse.class.toString(), this);
         this.client.addListener(UserRegistrationResponse.class.toString(), this);
+        this.client.addListener(GetCVResponse.class.toString(), this);
+        this.client.addListener(GetEvTypologiesResponse.class.toString(), this);
+        this.client.addListener(GetVaccinesResponse.class.toString(), this);
+        this.client.addListener(GetReportResponse.class.toString(), this);
     }
     @Override
     public void onPacketReceived(Packet packet) {
@@ -35,7 +40,26 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
         }
         if(packet instanceof RegistrationEVResponse){
             RegistrationEVResponse res = (RegistrationEVResponse) packet;
-            System.out.println(res.isEsito());
+            System.out.println("Registrazione ev: " + res.isEsito());
+        }
+        if(packet instanceof GetCVResponse){
+            GetCVResponse res = (GetCVResponse) packet;
+            List<CentroVaccinale> list = res.getCvList();
+            for(CentroVaccinale cv : list){
+                System.out.println(cv);
+            }
+        }
+        if(packet instanceof GetEvTypologiesResponse){
+            List<TipologiaEventoAvverso> list = ((GetEvTypologiesResponse)packet).getTypologies();
+            list.forEach(System.out::println);
+        }
+        if(packet instanceof GetVaccinesResponse){
+            List<Vaccino> list = ((GetVaccinesResponse)packet).getVaccines();
+            list.forEach(System.out::println);
+        }
+        if(packet instanceof GetReportResponse){
+            ReportCV report = ((GetReportResponse)packet).getReport();
+            System.out.println(report.getReportString());
         }
     }
 
@@ -43,6 +67,12 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
     /* Run per simulare il comportamento di una GUI */
     @Override
     public void run() {
+        client.getEvTypologies();
+        client.getVaccines();
+        CentroVaccinale cv = new CentroVaccinale();
+        cv.setId(11);
+        client.getReport(cv);
+        /*
         Vaccinato vaccinato = new Vaccinato();
         vaccinato.setCodiceFiscale("1111");
         vaccinato.setCognome("Masin");
@@ -51,8 +81,7 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
         vaccinato.setEmail("davide.masin40@gmail.com");
         vaccinato.setPassword("davide");
 
-        CentroVaccinale cv = new CentroVaccinale();
-        cv.setId(11);
+
 
         Vaccino vaccino = new Vaccino();
         vaccino.setId(6);
@@ -64,8 +93,16 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
         v.setCentroVaccinale(cv);
 
         //client.insertVaccination(v);
-        client.requestUserRegistration(vaccinato, "VthQ6M0hol9aNlEl");
-
+        client.requestUserLogin("davide", "davide");
+        EventoAvverso ev = new EventoAvverso();
+        ev.setSeverita(5);
+        ev.setNote("Prova database 3");
+        ev.setCentroVaccinale(cv);
+        TipologiaEventoAvverso tipologiaEV = new TipologiaEventoAvverso();
+        tipologiaEV.setId(1);
+        ev.setTipologia(tipologiaEV);
+        client.insertEV(ev);
+        */
         int i = 0;
         while(true){
             System.out.println("Cont: " + i++);

@@ -86,9 +86,45 @@ public class ClientHandler {
         return true;
     }
 
-    public boolean insertEV(EventoAvverso ev, Vaccinato vaccinato){
+    public boolean insertEV(EventoAvverso ev){
         if(session == null) return false;
-        session.write(new RegistrationEVRequest(ev, vaccinato));
+        session.write(new RegistrationEVRequest(ev));
+        return true;
+    }
+
+    public boolean getAllCV(){
+        if(session == null) return false;
+        session.write(new GetAllCVRequest());
+        return true;
+    }
+
+    public boolean getCVByName(String name){
+        if(session == null) return false;
+        session.write(new GetCVByNameRequest(name));
+        return true;
+    }
+
+    public boolean getCVByMunicipalityTypology(String municipality, String typology){
+        if(session == null) return false;
+        session.write(new GetCVByMunicipalityTypologyRequest(municipality, typology));
+        return true;
+    }
+
+    public boolean getEvTypologies(){
+        if(session == null) return false;
+        session.write(new GetEVTypologiesRequest());
+        return true;
+    }
+
+    public boolean getVaccines(){
+        if(session == null) return false;
+        session.write(new GetVaccinesRequest());
+        return true;
+    }
+
+    public boolean getReport(CentroVaccinale cv){
+        if(session == null) return false;
+        session.write(new GetReportRequest(cv));
         return true;
     }
 
