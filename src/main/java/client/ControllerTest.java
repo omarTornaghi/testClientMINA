@@ -73,7 +73,7 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
     /* Run per simulare il comportamento di una GUI */
     @Override
     public void run() {
-        client.getVaccinationByKey("pvGzeBHv6mxX2qkb");
+        client.requestUserLogin("omar", "omar");
         /*
         Vaccinato vaccinato = new Vaccinato();
         vaccinato.setCodiceFiscale("1111");

@@ -1,7 +1,11 @@
 package datatypes.protocolmessages;
 
 import datatypes.CentroVaccinale;
-
+/**
+ * Classe model per scambio di messaggi
+ * @author Tornaghi Omar
+ * @version 1.0
+ */
 public class GetReportRequest extends Packet{
     private CentroVaccinale cv;
 

@@ -3,7 +3,11 @@ package datatypes.protocolmessages;
 import datatypes.CentroVaccinale;
 
 import java.util.List;
-
+/**
+ * Classe model per scambio di messaggi
+ * @author Tornaghi Omar
+ * @version 1.0
+ */
 public class GetCVResponse extends PacketACK{
     List<CentroVaccinale> cvList;
 

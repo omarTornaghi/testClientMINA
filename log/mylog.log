@@ -557,3 +557,29 @@ INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
 INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
 INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.GetVaccinationByKeyRequest@1150efcd
 INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.GetVaccinationByKeyResponse@5a4172ce
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.UserLoginRequest@11413283
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.UserLoginRequest@58e78039
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.UserLoginRequest@744cb0e
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CLOSED
