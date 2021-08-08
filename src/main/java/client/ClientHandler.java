@@ -11,9 +11,17 @@ import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
 import org.apache.mina.filter.codec.serialization.ObjectSerializationCodecFactory;
 import org.apache.mina.filter.logging.LoggingFilter;
+import org.apache.mina.filter.ssl.SslFilter;
 import org.apache.mina.transport.socket.nio.NioSocketConnector;
 
+import javax.net.ssl.KeyManagerFactory;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManagerFactory;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.net.InetSocketAddress;
+import java.security.KeyStore;
+import java.security.SecureRandom;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -44,14 +52,38 @@ public class ClientHandler {
         listeners = new ConcurrentHashMap<>();
     }
 
+
+    private static SSLContext getSslContext(String keystoreFile, String password) throws Exception {
+        KeyStore keystore = KeyStore.getInstance(KeyStore.getDefaultType());
+        try (InputStream in = new FileInputStream(keystoreFile)) {
+            keystore.load(in, password.toCharArray());
+        }
+        KeyManagerFactory keyManagerFactory =
+                KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
+        keyManagerFactory.init(keystore, password.toCharArray());
+
+        TrustManagerFactory trustManagerFactory =
+                TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+        trustManagerFactory.init(keystore);
+
+        SSLContext sslContext = SSLContext.getInstance("TLS");
+        sslContext.init(
+                keyManagerFactory.getKeyManagers(),
+                trustManagerFactory.getTrustManagers(),
+                new SecureRandom());
+        return sslContext;
+    }
+
     /**
      * Si connette a un server
      * @return true se la connessione è andata a buon fine, false altrimenti
      */
-    public boolean connect() {
+    public boolean connect() throws Exception {
         connector = new NioSocketConnector();
         connector.setConnectTimeoutMillis(2000);
-
+        SslFilter sslFilter = new SslFilter(getSslContext("config/tls/myKeyStore.jks", "password"));
+        sslFilter.setUseClientMode(true);
+        connector.getFilterChain().addFirst("sslFilter", sslFilter);
         connector.getFilterChain().addLast("codec",
                 new ProtocolCodecFilter(new ObjectSerializationCodecFactory()));
 
