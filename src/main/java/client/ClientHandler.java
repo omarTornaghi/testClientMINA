@@ -53,14 +53,12 @@ public class ClientHandler {
     }
 
 
-    private static SSLContext getSslContext(String keystoreFile, String password) throws Exception {
+    private static SSLContext getSslContext() throws Exception {
         KeyStore keystore = KeyStore.getInstance(KeyStore.getDefaultType());
-        try (InputStream in = new FileInputStream(keystoreFile)) {
-            keystore.load(in, password.toCharArray());
-        }
+        keystore.load(ClientHandler.class.getClassLoader().getResourceAsStream("tls/myKeyStore.jks"), "password".toCharArray());
         KeyManagerFactory keyManagerFactory =
                 KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
-        keyManagerFactory.init(keystore, password.toCharArray());
+        keyManagerFactory.init(keystore, "password".toCharArray());
 
         TrustManagerFactory trustManagerFactory =
                 TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
@@ -81,7 +79,7 @@ public class ClientHandler {
     public boolean connect() throws Exception {
         connector = new NioSocketConnector();
         connector.setConnectTimeoutMillis(2000);
-        SslFilter sslFilter = new SslFilter(getSslContext("config/tls/myKeyStore.jks", "password"));
+        SslFilter sslFilter = new SslFilter(getSslContext());
         sslFilter.setUseClientMode(true);
         connector.getFilterChain().addFirst("sslFilter", sslFilter);
         connector.getFilterChain().addLast("codec",
@@ -254,6 +252,18 @@ public class ClientHandler {
     public boolean getReport(CentroVaccinale cv){
         if(session == null) return false;
         session.write(new GetReportRequest(cv));
+        return true;
+    }
+
+    public boolean requestUserIdCheck(String userId){
+        if(session == null) return false;
+        session.write(new CheckUserIdRequest(userId));
+        return true;
+    }
+
+    public boolean requestEmailCheck(String email){
+        if(session == null) return false;
+        session.write(new CheckEmailRequest(email));
         return true;
     }
 

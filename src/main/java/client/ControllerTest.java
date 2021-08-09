@@ -20,11 +20,11 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
         this.client.addListener(GetVaccinesResponse.class.toString(), this);
         this.client.addListener(GetReportResponse.class.toString(), this);
         this.client.addListener(GetVaccinationByKeyResponse.class.toString(), this);
+        this.client.addListener(CheckUserIdResponse.class.toString(), this);
+        this.client.addListener(CheckEmailResponse.class.toString(), this);
     }
-    static int contRisposte = 0;
     @Override
     public void onPacketReceived(Packet packet) {
-
         if(packet instanceof RegistrationCVResponse){
             RegistrationCVResponse res = (RegistrationCVResponse) packet;
             System.out.println(res.getPacketName() + " " + res.isEsito());
@@ -39,7 +39,7 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
         }
         if(packet instanceof UserLoginResponse){
             UserLoginResponse res = (UserLoginResponse) packet;
-            System.out.println("Login numero " + ++contRisposte + ": " + res.isEsito());
+            System.out.println("Login: " + res.isEsito());
         }
         if(packet instanceof RegistrationEVResponse){
             RegistrationEVResponse res = (RegistrationEVResponse) packet;
@@ -69,13 +69,20 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
             Vaccinazione v = res.getVaccination();
             System.out.println("Data: " + v.getDataVaccinazione());
         }
+        if(packet instanceof CheckUserIdResponse){
+            System.out.println("Esiste userId? " + ((CheckUserIdResponse)packet).isEsito());
+        }
+        if(packet instanceof CheckEmailResponse){
+            System.out.println("Esiste email? " + ((CheckEmailResponse)packet).isEsito());
+        }
     }
 
 
     /* Run per simulare il comportamento di una GUI */
     @Override
     public void run() {
-
+        client.requestUserIdCheck("OMAR");
+        client.requestEmailCheck("omar.tor2011@gmail.com");
         /*
         Vaccinato vaccinato = new Vaccinato();
         vaccinato.setCodiceFiscale("1111");
@@ -107,16 +114,6 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
         ev.setTipologia(tipologiaEV);
         client.insertEV(ev);
         */
-        int i = 0;
-        while(true){
-            System.out.println("Richiesta numero: " + ++i);
-            client.requestUserLogin("omar", "omar");
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     /*

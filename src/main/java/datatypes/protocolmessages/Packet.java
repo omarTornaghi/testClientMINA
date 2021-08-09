@@ -1,6 +1,7 @@
 package datatypes.protocolmessages;
 
 import java.io.Serializable;
+
 /**
  * Classe model per scambio di messaggi
  * @author Tornaghi Omar

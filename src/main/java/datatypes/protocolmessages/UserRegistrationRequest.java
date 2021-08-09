@@ -1,12 +1,14 @@
 package datatypes.protocolmessages;
 
 import datatypes.Vaccinato;
+
 /**
  * Classe model per scambio di messaggi
  * @author Tornaghi Omar
  * @version 1.0
  */
 public class UserRegistrationRequest extends Packet{
+    private static final long serialVersionUID = 2761386278526330531L;
     private Vaccinato vaccinato;
     private String key;
 

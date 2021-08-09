@@ -1,6 +1,7 @@
 package datatypes.protocolmessages;
 
 import datatypes.Vaccinato;
+
 /**
  * Classe model per scambio di messaggi
  * @author Tornaghi Omar
