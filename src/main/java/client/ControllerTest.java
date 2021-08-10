@@ -62,7 +62,7 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
         }
         if(packet instanceof GetReportResponse){
             ReportCV report = ((GetReportResponse)packet).getReport();
-            System.out.println(report.getReportString());
+            System.out.println(report.getReportList());
         }
         if(packet instanceof GetVaccinationByKeyResponse){
             GetVaccinationByKeyResponse res = (GetVaccinationByKeyResponse) packet;
@@ -81,8 +81,9 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
     /* Run per simulare il comportamento di una GUI */
     @Override
     public void run() {
-        client.requestUserIdCheck("OMAR");
-        client.requestEmailCheck("omar.tor2011@gmail.com");
+        CentroVaccinale cv = new CentroVaccinale();
+        cv.setId(11);
+        client.getReport(cv);
         /*
         Vaccinato vaccinato = new Vaccinato();
         vaccinato.setCodiceFiscale("1111");

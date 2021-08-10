@@ -845,3 +845,89 @@ INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatyp
 INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.CheckEmailRequest@1fcda8c2
 INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.CheckUserIdResponse@3b714e69
 INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.CheckEmailResponse@1aa8c26b
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.GetReportRequest@76381fcb
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.GetReportRequest@76381fcb
+WARN NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - EXCEPTION :
+org.apache.mina.filter.codec.ProtocolDecoderException: org.apache.mina.core.buffer.BufferDataException: java.io.InvalidClassException: failed to read class descriptor (Hexdump: 00 00 01 A6 AC ED 00 05 73 72 01 00 2C 64 61 74 61 74 79 70 65 73 2E 70 72 6F 74 6F 63 6F 6C 6D 65 73 73 61 67 65 73 2E 47 65 74 52 65 70 6F 72 74 52 65 73 70 6F 6E 73 65 78 72 01 00 24 64 61 74 61 74 79 70 65 73 2E 70 72 6F 74 6F 63 6F 6C 6D 65 73 73 61 67 65 73 2E 50 61 63 6B 65 74 41 43 4B 78 72 01 00 21 64 61 74 61 74 79 70 65 73 2E 70 72 6F 74 6F 63 6F 6C 6D 65 73 73 61 67 65 73 2E 50 61 63 6B 65 74 78 70 01 73 72 01 00 12 64 61 74 61 74 79 70 65 73 2E 52 65 70 6F 72 74 43 56 78 70 00 00 00 09 40 07 1C 71 C7 1C 71 C7 73 72 01 00 19 64 61 74 61 74 79 70 65 73 2E 43 65 6E 74 72 6F 56 61 63 63 69 6E 61 6C 65 78 70 00 00 00 0B 70 70 70 70 70 70 70 70 73 72 01 00 11 6A 61 76 61 2E 75 74 69 6C 2E 48 61 73 68 4D 61 70 78 70 3F 40 00 00 00 00 00 0C 77 08 00 00 00 10 00 00 00 04 74 00 06 46 65 62 62 72 65 73 72 01 00 14 64 61 74 61 74 79 70 65 73 2E 52 65 70 6F 72 74 44 61 74 61 78 70 00 00 00 02 40 08 00 00 00 00 00 00 74 00 0B 54 61 63 68 69 63 61 72 64 69 61 73 71 00 7E 00 0B 00 00 00 02 40 00 00 00 00 00 00 00 74 00 0C 4D 61 6C 20 64 69 20 74 65 73 74 61 73 71 00 7E 00 0B 00 00 00 04 40 06 00 00 00 00 00 00 74 00 1D 44 6F 6C 6F 72 69 20 6D 75 73 63 6F 6C 61 72 69 20 65 20 61 72 74 69 63 6F 6C 61 72 69 73 71 00 7E 00 0B 00 00 00 01 40 14 00 00 00 00 00 00 78)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:242)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.filter.ssl.SslHandler.flushScheduledEvents(SslHandler.java:322)
+	at org.apache.mina.filter.ssl.SslFilter.messageReceived(SslFilter.java:497)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:410)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:710)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.apache.mina.core.buffer.BufferDataException: java.io.InvalidClassException: failed to read class descriptor
+	at org.apache.mina.core.buffer.AbstractIoBuffer.getObject(AbstractIoBuffer.java:2186)
+	at org.apache.mina.filter.codec.serialization.ObjectSerializationDecoder.doDecode(ObjectSerializationDecoder.java:90)
+	at org.apache.mina.filter.codec.CumulativeProtocolDecoder.decode(CumulativeProtocolDecoder.java:176)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:232)
+	... 20 more
+Caused by: java.io.InvalidClassException: failed to read class descriptor
+	at java.base/java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1986)
+	at java.base/java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1862)
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2169)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1679)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:493)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:451)
+	at java.base/java.util.HashMap.readObject(HashMap.java:1460)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1175)
+	at java.base/java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2325)
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2196)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1679)
+	at java.base/java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2464)
+	at java.base/java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2358)
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2196)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1679)
+	at java.base/java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2464)
+	at java.base/java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2358)
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2196)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1679)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:493)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:451)
+	at org.apache.mina.core.buffer.AbstractIoBuffer.getObject(AbstractIoBuffer.java:2184)
+	... 23 more
+Caused by: java.lang.ClassNotFoundException: datatypes.ReportData
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.mina.core.buffer.AbstractIoBuffer$3.readClassDescriptor(AbstractIoBuffer.java:2167)
+	at java.base/java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1984)
+	... 48 more
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.GetReportRequest@6a969a2b
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.GetReportRequest@770e711a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.GetReportResponse@1ef3cdaa
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.GetReportRequest@67798c2f
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.GetReportRequest@d495e47
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.GetReportResponse@55405094

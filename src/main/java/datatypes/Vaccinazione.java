@@ -2,6 +2,7 @@ package datatypes;
 
 import java.io.Serializable;
 import java.util.Date;
+
 /**
  * Classe model per salvare i dati del db in memoria
  * @author Tornaghi Omar
