@@ -3,7 +3,7 @@ import client.ClientHandler;
 
 public class MainProgram {
     public static void main(String[] args) throws Throwable {
-        ClientHandler client = new ClientHandler();
+        ClientHandler client = ClientHandler.getInstance();
         client.connect();
         ControllerTest cl = new ControllerTest(client);
         cl.start();

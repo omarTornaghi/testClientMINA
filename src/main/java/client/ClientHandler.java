@@ -32,6 +32,10 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class ClientHandler {
     /**
+     * Riferimento a clientHandler
+     */
+    private static ClientHandler instance = null;
+    /**
      * PORT porta del server in ascolto
      */
     private static final int PORT = 9123;
@@ -48,10 +52,14 @@ public class ClientHandler {
      */
     private final Map<String, PacketReceivedListener> listeners;
 
-    public ClientHandler(){
+    private ClientHandler(){
         listeners = new ConcurrentHashMap<>();
     }
 
+    public static synchronized ClientHandler getInstance(){
+        if(instance == null) instance = new ClientHandler();
+        return instance;
+    }
 
     private static SSLContext getSslContext() throws Exception {
         KeyStore keystore = KeyStore.getInstance(KeyStore.getDefaultType());
