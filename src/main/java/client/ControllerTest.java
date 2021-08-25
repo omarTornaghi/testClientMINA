@@ -83,7 +83,15 @@ public class ControllerTest extends Thread implements PacketReceivedListener {
     public void run() {
         CentroVaccinale cv = new CentroVaccinale();
         cv.setId(11);
-        client.getReport(cv);
+        cv.setNome("prova");
+        cv.setQualificatore("via");
+        cv.setNumero("12");
+        cv.setComune("cairate");
+        cv.setNomeIndirizzo("campo dei fiori");
+        cv.setTipologia("ospedale");
+        cv.setSiglaProvincia("va");
+        cv.setCap("21050");
+        client.insertCV(cv);
         /*
         Vaccinato vaccinato = new Vaccinato();
         vaccinato.setCodiceFiscale("1111");

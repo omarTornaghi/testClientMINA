@@ -17,8 +17,6 @@ import org.apache.mina.transport.socket.nio.NioSocketConnector;
 import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManagerFactory;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.net.InetSocketAddress;
 import java.security.KeyStore;
 import java.security.SecureRandom;
@@ -56,6 +54,10 @@ public class ClientHandler {
         listeners = new ConcurrentHashMap<>();
     }
 
+    /**
+     * Ottiene l'istanza di @ClientHandler
+     * @return istanza di @ClientHandler
+     */
     public static synchronized ClientHandler getInstance(){
         if(instance == null) instance = new ClientHandler();
         return instance;
@@ -120,6 +122,14 @@ public class ClientHandler {
         }
         catch(Exception ex){ return false; }
         return true;
+    }
+
+    /**
+     * Verifica stato della connessione
+     * @return true se il client è connesso, false altrimenti
+     */
+    public boolean isConnected(){
+        return session != null && session.isConnected();
     }
 
     /**
@@ -263,12 +273,21 @@ public class ClientHandler {
         return true;
     }
 
+    /**
+     * Invia al server una richiesta per verificare l'userId di un cittadino
+     * @param userId userId da verificare
+     * @return true se la richiesta va a buon fine, false altrimenti
+     */
     public boolean requestUserIdCheck(String userId){
         if(session == null) return false;
         session.write(new CheckUserIdRequest(userId));
         return true;
     }
-
+    /**
+     * Invia al server una richiesta per verificare l'email di un cittadino
+     * @param email email da verificare
+     * @return true se la richiesta va a buon fine, false altrimenti
+     */
     public boolean requestEmailCheck(String email){
         if(session == null) return false;
         session.write(new CheckEmailRequest(email));

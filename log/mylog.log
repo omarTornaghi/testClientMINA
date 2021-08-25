@@ -931,3 +931,10 @@ INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
 INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
 INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.GetReportRequest@d495e47
 INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.GetReportResponse@55405094
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationCVRequest@770e711a
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - CREATED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - OPENED
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - SENT: datatypes.protocolmessages.RegistrationCVRequest@462ff796
+INFO NioProcessor-2 org.apache.mina.filter.logging.LoggingFilter - RECEIVED: datatypes.protocolmessages.RegistrationCVResponse@3d229af8
